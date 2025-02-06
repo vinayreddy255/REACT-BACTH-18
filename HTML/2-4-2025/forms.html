@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flag and Carrom Board</title>
+    <style>
+        
+        .flag {
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+        }
+        .stripe {
+            height: 33.3%;
+            width: 100%;
+        }
+        .top { background-color: orange; }
+        .middle { background-color: white; position: relative; }
+        .bottom { background-color: green; }
+        .circle {
+            width: 50px;
+            height: 50px;
+            background-color: navy;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+    </style>
 </head>
 <body>
-    <div>
-        <label>UserNmae:</label>
-        <span><input type="text" placeholder="pelase enter the neame.."/></span>
+    <h2>Flag Design</h2>
+    <div class="flag">
+        <div class="stripe top"></div>
+        <div class="stripe middle"><div class="circle"></div></div>
+        <div class="stripe bottom"></div>
     </div>
-    <div>
-        <label>Phone number:</label>
-        <span><input type="number"/></span>
-    </div>
-    <div>
-        <label>Date:</label>
-        <input type="date"/>
-    </div>
-    <div>
-        <label>Month:</label>
-        <input type="month"/>
-    </div>
-    <div>
-        <label>Week:</label>
-        <input type="week"/>
-    </div>
-    <div>
-        <h3>Course</h3>
-        <label>HTML:<input type="checkbox"/></label>
-        <label>CSS:<input type="checkbox"/></label>
-        <label>JAVA SCRIPT:<input type="checkbox" checked/></label>
-        <label>REACT:<input type="checkbox"/></label>
-    </div>
-    <div>
-        <h3>Gender</h3>
-        <label>Male:<input type="radio" name="gender"/></label>
-        <label>Female:<input type="radio" name="gender"/></label>
-        <label>Others:<input type="radio" name="gender"/></label>
-    </div>
+    
 </body>
 </html>
