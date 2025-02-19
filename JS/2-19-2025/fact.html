@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="fact"></div>
+</body>
+<script>
+    /**
+     * Factorial
+     * 5*4*3*2*1
+     * 6*5*4*3*2*1
+     * 5
+    */
+    var fact=1; //
+    for(var i=5; i>=1; i--){        
+        // fact*0 = 0
+        fact = fact*i; //1*5=5, 5*4=20, 20*3=60, 60*2 =120, 120*1=120
+    }
+    document.getElementById("fact").innerHTML = "<h1>"+fact+"</h1>"
+    console.log(fact)
+</script>
+</html>

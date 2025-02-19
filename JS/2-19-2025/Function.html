@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="table"></div>
+</body>
+<script>
+    /**
+     * Functions
+    */
+    function Tabel(input1) {
+        for (var i = 1; i <= 10; i++) {
+            var mulValue = input1 * i;
+            var pattern = input1 + "*" + i + "=" + mulValue;
+            document.getElementById("table").innerHTML += "<div>" + pattern + "</div>";
+        }
+    }
+    Tabel(5)
+    Tabel(6)
+    Tabel(7)
+    Tabel(8)
+</script>
+
+</html>

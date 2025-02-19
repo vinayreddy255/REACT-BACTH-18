@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /**
+     * Funcitons
+    */
+   // 7+4+5 = 16
+   //8+9+7=24
+   function Addition(a,b,c){
+    var result = a+b+c;
+    return result;
+   }
+   var ad1= Addition(10,20,40);
+   var ad2= Addition(10,20,400);
+//    console.log(ad1);
+//    console.log(ad2);
+   
+   function ArthMeticOperioan(a,b=10,c){
+        var result = 0;
+        if(c=='+'){
+            result = a+b;
+        } else if(c=='-'){
+            result = a-b;
+        } else if(c == '*'){
+            result = a*b
+        }
+        return result;
+   }
+   console.log(ArthMeticOperioan(10,undefined, '+'))
+   console.log(ArthMeticOperioan(10,20, '+'));
+   console.log(ArthMeticOperioan(10,20, '-'));
+   console.log(ArthMeticOperioan(10,20, '*'));
+</script>
+</html>
