@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select onchange="handleChange(10,event)">
+        <option>Bangalore</option>
+        <option>Hyderbad</option>
+        <option>Chennaie</option>
+    </select>    
+</body>
+<script>
+    function handleChange(a, event){
+        console.log(event.target.value)
+        // alert('handle funcation change...')
+    }
+</script>
+</html>

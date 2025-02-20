@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>Key Up:<input type="text" id="text1" onkeyup="keyUpEvnt()"/></div>
+    <div>Key Down:<input type="text" id="text2" onkeydown="keyDownEvnt()"/></div>
+    <div id="text"></div>
+</body>
+<script>
+
+    function keyUpEvnt(){
+            // alert('hello data....')
+            var val = document.getElementById('text1').value;
+            document.getElementById('text').innerHTML = '<h1>'+val+'<h1>';
+    }
+    function keyDownEvnt(){
+            alert('keyDownEvnt data....')
+    }
+</script>
+</html>
