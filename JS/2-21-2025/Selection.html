@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select onchange="countrSelection(event)">
+        <option>---Please selct--</option>
+            <option value="IN">India</option>
+            <option value="US">US</option>
+            <option value="UK">UK</option>
+    </select>
+    <div id="states"> </div>
+    <div id="dst"> </div>
+</body>
+<script>
+    var datArr= {
+        'IN':['AP','TN','KA','TS'],
+        'US':['CL','NE','CH','DL'],
+        'UK':['LN','ABC','EN']
+    }
+
+    var disticts={
+            'AP':['Nellore','Kavali','Ongle'],
+            'TN':['Chennai','Cmbt','PND'],
+            'KA':['Banglore','Mysoure','Udipi'],
+            'TS':['Mb','Km']
+    }
+
+    function countrSelection(evnt){
+        var countryCode = evnt.target.value
+        // console.log(datArr[countryCode])        
+        var states = datArr[countryCode]
+        // console.log(evnt.target.value)
+        document.getElementById('dst').innerHTML=' '
+        var stateDropdown="<select onchange='stateSelection(event)'> <option>---please select state--</option>";
+        for(var i=0; i<states.length; i++){
+            // console.log(states[i])
+            stateDropdown+='<option>'+states[i]+'</option>'
+        }
+        stateDropdown+='</select>';        
+        document.getElementById('states').innerHTML=stateDropdown;
+        
+    }
+
+    function stateSelection(event){
+        var value = event.target.value;
+        var distList = disticts[value]        
+        var distictDropdown="<select> <option>---please select distict--</option>";
+        for(var i=0; i<distList.length; i++){            
+            distictDropdown+='<option>'+distList[i]+'</option>'
+        }
+        distictDropdown+='</select>';    
+        document.getElementById('dst').innerHTML=distictDropdown;
+     
+    }
+</script>
+</html>
