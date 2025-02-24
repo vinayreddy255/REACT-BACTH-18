@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var str = 'hello react js data'
+    var ar =str.split(' ')
+    var output=""
+    for(var i=0; i<ar.length;i++){
+        var fc = ar[i][0].toUpperCase();
+        var rm = ar[i].substr(1);
+        var fullStr = fc+rm;
+        // console.log(fullStr)
+        output=output+fullStr+" "
+        // console.log(rm)
+        // console.log(ar[i])
+        // console.log(fc)
+    }
+    console.log(output)
+    console.log(output.trim())
+    //input : hello react js data
+    //output1: Hello React Js Data;
+</script>
+</html>
