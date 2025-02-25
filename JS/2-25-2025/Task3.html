@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        Box1:<input type="text" id="input1" />
+    </div>
+    <div>
+        Box2:<input type="text" id="input2" disabled/>
+    </div>
+    <div>
+        <button onclick="eachChar()">Click</button>
+    </div>
+    <h2 id="counterval"></h2>
+</body>
+<script>
+    // var count=0
+    function eachChar() {
+
+        var input1 = document.getElementById('input1').value;
+
+        // count=count+1
+
+        var input2 = input1[input1.length - 1];
+
+        var input11 = input1.substr(0, input1.length - 1); //hell
+
+        console.log(input2)
+        // document.getElementById('counterval').innerHTML = count
+        if (input2) {
+            document.getElementById('input2').value += input2
+        } else{
+            alert('pease enter value input1 box')
+        }
+
+        document.getElementById('input1').value = input11;
+    }
+</script>
+
+</html>
