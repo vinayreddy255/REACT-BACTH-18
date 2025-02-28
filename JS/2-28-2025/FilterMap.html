@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var ar = [1,2,3,4,0,5,6,0,7,8,9,10,-1,0,-3, 'STR',NaN];
+    var str ="hello";
+    var flt = ar.filter(function(e,i,a){
+        return e*5
+    })
+    console.log('orignal arr',ar)
+    console.log('filter arr',flt)
+
+    var mp = ar.map(function(e){
+        return e*5
+    })
+    console.log('map arr>>>',mp);
+
+    console.log(typeof ar)
+    console.log(Array.isArray(ar))
+    console.log(Array.isArray(str))
+</script>
+</html>
