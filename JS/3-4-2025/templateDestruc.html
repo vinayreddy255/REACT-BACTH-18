@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const fName = 'Ram';
+    const lName = 'Krishana';
+    const city = 'Bangalore';
+    // const fullAddress = 'Hello My Name is '+fName+' '+lName+' and city is '+city;
+    const fullAddress = `Hello My Name is ${fName} ${lName} and city is ${city}`
+
+    console.log(fullAddress)
+
+    const obj={name:'Siva', age:22, city:'Banglroe', address:{city:'Banglore', pinCode:1234}};
+    const name ='raju abc'
+
+    const {name:mynmae, age, phone="99999", address:{city:MyCity, pinCode}} = obj;
+
+    console.log(mynmae)
+    console.log(age)
+    // console.log(address)
+    console.log(MyCity, pinCode)
+
+</script>
+</html>

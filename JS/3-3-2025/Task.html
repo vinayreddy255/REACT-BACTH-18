@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Image</th>
+            </tr>
+            <tbody id="tdata"></tbody>
+        </thead>
+    </table>
+</body>
+<script>
+    var emp =      [{
+        "id": 100,
+        "FIRST_NAME": "Steven",
+        "LAST_NAME": "King",
+        "EMAIL": "SKING",
+        "PHONE_NUMBER": "515.123.4567",
+        "HIRE_DATE": "1987-06-17",
+        "SALARY": 24000,
+        "DEPARTMENT_ID": 90,
+        "Image": "./images/img1.jpg"
+      },
+      {
+          "id": 101,
+          "FIRST_NAME": "Neena",
+          "LAST_NAME": "Kochhar",
+          "EMAIL": "NKOCHHAR",
+          "PHONE_NUMBER": "515.123.4568",
+          "HIRE_DATE": "1989-09-21",
+          "SALARY": 17000,
+          "DEPARTMENT_ID": 90,
+          "Image": "./images/img2.jpg"
+      },
+      {
+          "id": 102,
+          "FIRST_NAME": "Lex",
+          "LAST_NAME": "De Haan",
+          "EMAIL": "LDEHAAN",
+          "PHONE_NUMBER": "515.123.4569",
+          "HIRE_DATE": "1993-01-13",
+          "SALARY": 17000,
+          "DEPARTMENT_ID": 90,
+          "Image": "./images/img3.jpg"
+      },
+      {
+        "id": 103,
+        "FIRST_NAME": "Alexander",
+        "LAST_NAME": "Hunold",
+        "EMAIL": "AHUNOLD",
+        "PHONE_NUMBER": "590.423.4567",
+        "HIRE_DATE": "1990-01-03",
+        "SALARY": 9000,
+        "DEPARTMENT_ID": 60,
+        "Image": "./images/img4.jpg"
+      },
+      {
+        "id": 105,
+        "FIRST_NAME": "David",
+        "LAST_NAME": "Austin",
+        "EMAIL": "DAUSTIN",
+        "PHONE_NUMBER": "590.423.4569",
+        "HIRE_DATE": "1997-06-25",
+        "SALARY": 4800,
+        "DEPARTMENT_ID": 60,
+        "Image": "./images/img5.jpg"
+      },
+      {
+        "id": 106,
+        "FIRST_NAME": "Valli",
+        "LAST_NAME": "Pataballa",
+        "EMAIL": "VPATABAL",
+        "PHONE_NUMBER": "590.423.4560",
+        "HIRE_DATE": "1998-02-05",
+        "SALARY": 4800,
+        "DEPARTMENT_ID": 60,
+        "Image": "https://www.oracle.com/webfolder/technetwork/jet/Images/dvt/7.png"
+      },
+      {
+        "id": 107,
+        "FIRST_NAME": "Diana",
+        "LAST_NAME": "Lorentz",
+        "EMAIL": "DLORENTZ",
+        "PHONE_NUMBER": "590.423.5567",
+        "HIRE_DATE": "1999-02-07",
+        "SALARY": 4200,
+        "DEPARTMENT_ID": 60,
+        "Image": "https://www.oracle.com/webfolder/technetwork/jet/Images/dvt/7.png"
+      }];
+      var tableRow = "";
+emp.forEach(function(e){
+    var fullName = `${e.FIRST_NAME} ${e.LAST_NAME}`;
+    tableRow += `<tr>
+        <td>${fullName}</td>
+        <td>${e.EMAIL}</td>
+        <td><img width="50" height="50" src="${e.Image}" onclick="getEmpData(${e.id})" /></td>
+    </tr>`;
+
+
+});
+document.getElementById("tdata").innerHTML = tableRow;
+
+function getEmpData(empId) {
+    var employee = emp.find(e => e.id === empId); // Find the full object by ID
+    console.log(employee);
+}
+
+</script>
+</html>

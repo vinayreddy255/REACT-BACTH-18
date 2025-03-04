@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let and const is block socpe,  var is funcatinal scope
+    //var able to redfined the same varible any sope but let and const not able to redifend the same varible with in the scope
+    // var will hosting the varible, let and const not hosted but temparrary ded zone happen
+    
+    
+    // console.log('city...', city)//undfined
+    var city = 'Bangolre'
+    var name = 'test'
+    
+    // console.log(id)//
+    let id = 1234;  
+    id = 898989;
+    console.log(id)
+    const pincode='hello react js';
+    // pincode = 1234567;
+    // console.log(pincode) //
+
+    if(true){
+        var name="hello"
+        let id = 99999;        
+        console.log(id) // 
+    }
+    console.log(name);//
+    console.log(id) // 
+
+    const obj = {name:'sam', age:24, city:'Banglore'};
+    obj.name= 'raju';
+    console.log(obj)
+
+</script>
+</html>
