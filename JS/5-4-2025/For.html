@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const obj1 = {name:'sam', age:22, city:'Bangalore', pincode:1323, phone:23829, addres:'4r394'}; 
+    
+    for(let key in obj1){
+        console.log(key,'<<>>',obj1[key])
+    }
+
+    const str ="helllo";
+    for(let i in str){
+        console.log(i, str[i])
+    }
+
+    
+    
+    for(let i of str){
+        console.log(i)
+    }
+    const ar =[1,2,3,4]
+    for(let i of ar){
+        console.log(i)
+    }
+</script>
+</html>

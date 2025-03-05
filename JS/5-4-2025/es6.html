@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const obj1 = {name:'sam', age:22, city:'Bangalore', pincode:1323, phone:23829, addres:'4r394'}; //a
+    const obj2 = {...obj1}; //b
+
+    obj2.name='Ram'
+
+    console.log(obj1)//{name:'sam', age:22, city:'Bangalore'};
+    console.log(obj2)//{name:'ram', age:22, city:'Bangalore'};
+    const str1 = 'hello';
+    const str2 = [...str1];
+    console.log(str2)
+    // name, age, obj3
+    const {name, age, ...obj3} = obj1;
+    console.log(name, age)
+    console.log(obj3)
+
+    function test(a,b, ...r){
+        console.log(a, b, r)
+    }
+
+    test(10,20,30,40,80,80,30,80,50,60)
+</script>
+</html>

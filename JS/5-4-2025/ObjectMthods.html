@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const obj1 = {name:'sam', age:22, city:'Bangalore', pincode:1323, phone:23829, addres:'4r394'}; 
+    const objKeys = Object.keys(obj1);
+    const objValues = Object.values(obj1)
+    const objEntries = Object.entries(obj1)
+    console.log('objKeys>>>', objKeys)
+    console.log('objValues>>>', objValues)
+    console.log('objEntries>>>', objEntries)
+
+    // [[name, sam],[age, 22]]
+
+    // console.log('objKeys>>>', obj1['name'])
+    // console.log('objKeys>>>', obj1['city'])
+    // objKeys.forEach(e=>{
+    //     console.log(e, obj1[e])
+    // })
+
+    objEntries.forEach(e=>{        
+        console.log(e[0],e[1]) 
+        //[name, sam]
+        //[age, 22]
+    })
+
+</script>
+</script>
+</html>
