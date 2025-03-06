@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Function iside one more funciton this accees the varible form outer function and innerfunciton, local varibles and global vairbles will access
+    // Clouser usses to crate static private varibels data encaplation
+    // it will create lexical scope
+    // stack(LIFO), quee, webapi and event lopp
+
+    function counter1(){
+        let count =1;
+        count=count+1;
+        return count;
+    }
+    const count = counter1();
+    console.log(count);//2
+    console.log(count);//2
+    console.log(count);//2
+
+    function ClouserCounter(){
+        let count =0;
+        return function(){
+            count=count+1;
+            return count;
+        }
+    } 
+    const callCounter=ClouserCounter();
+    console.log(callCounter())//1
+    console.log(callCounter())//2
+    console.log(callCounter())//3
+    console.log(callCounter())//4
+    console.log(callCounter())//5
+</script>
+</html>

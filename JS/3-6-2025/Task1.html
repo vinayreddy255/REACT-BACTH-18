@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const ar = [1,2,4,3,2,1,4,3];
+    const unq = [];
+    ar.forEach((e)=>{
+        if(unq.indexOf(e)==-1){
+            unq.push(e)
+        }
+    })
+console.log(unq)
+
+const nunq= ar.filter((e,i)=>ar.indexOf(e)==i); //0==0 1==1 1==4 [0,1]
+
+console.log(nunq)
+    //[1,2,4,3]
+</script>
+</html>
