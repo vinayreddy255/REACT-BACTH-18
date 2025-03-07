@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const obj1 = {name:'ram',age:22, city:'bang', address:{pinCode:'23432',location:'near temple'}}
+    // const obj2 = {...obj1};
+    // const obj2 = structuredClone(obj1);
+    const obj2 = JSON.parse(JSON.stringify(obj1));
+    obj2.address.pinCode = '00000';
+    console.log(obj1)
+    console.log(obj2)
+</script>
+</html>
