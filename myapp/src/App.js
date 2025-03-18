@@ -8,6 +8,8 @@ import InputHandler from './Components/InputHandler';
 import Form from './Components/Form';
 import ComponentA from './Components/ComponentA';
 import Condational from './Components/Condational.js';
+import ReactFr from './Components/ReactFr.js';
+import ReactUseEffect from './Components/ReactUseEffect.js';
 function App() {
   return (
     <div className="App">
@@ -18,7 +20,9 @@ function App() {
         {/* <InputHandler/> */}
         {/* <Form/> */}
         {/* <ComponentA/> */}
-        <Condational/>
+        {/* <Condational/> */}
+        {/* <ReactFr/> */}
+        <ReactUseEffect/>
     </div>
   );
 }
