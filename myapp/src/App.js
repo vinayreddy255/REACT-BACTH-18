@@ -14,6 +14,13 @@ import ReactUseEffect from './Components/ReactUseEffect.js';
 
 import { ContextData } from './ContextData.js';
 import RefComponet from './Components/RefComponet.js';
+
+import CounterReducer from './Components/ReducerCompont.js';
+import UseMemoHook from './Components/UseMemoHook.js';
+
+import CounterClick from './Components/CounterClick.js';
+import CounterHover from './Components/CounterHover.js';
+
 function App() {
   const obj = {name:'abc', city:'Hyderbad'}
   const [age, setAge] = useState(10)
@@ -34,8 +41,12 @@ function App() {
         {/* <ReactFr/> */}
         {/* <ReactUseEffect/>         */}
         </ContextData.Provider>
-
-        <RefComponet/>
+        
+        {/* <RefComponet/> */}
+        {/* <CounterReducer/> */}
+        {/* <UseMemoHook/> */}
+        <CounterClick/>
+        <CounterHover/>
     </div>
    
 
